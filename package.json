@@ -1,0 +1,31 @@
+{
+  "name": "devconnector",
+  "version": "1.0.0",
+  "description": "Api for developers to connect",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "babel-watch server.js"
+  },
+  "keywords": [],
+  "author": "chandrapenugonda",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^3.0.7",
+    "config": "^3.2.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.3.1",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.9",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "babel-watch": "^7.0.0",
+    "concurrently": "^5.0.2",
+    "core-js": "3"
+  }
+}
