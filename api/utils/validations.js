@@ -13,4 +13,11 @@ export const registerValidations = [
   check("password", "please enter a valid password").isLength({ min: 6 })
 ];
 
-export const profileValidations = [];
+export const profileValidations = [
+  check("skills", "skills are required")
+    .not()
+    .isEmpty(),
+  check("status", "please select status")
+    .not()
+    .isEmpty()
+];

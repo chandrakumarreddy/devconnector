@@ -13,6 +13,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 //routes
-app.get("/", routes(app));
+routes(app);
 
 export default app;
