@@ -5,7 +5,7 @@ import profileRouter from "./profile";
 
 export default app => {
   app.use("/auth", authRouter);
-  // app.get("/users", usersRouter);
+  app.use("/users", usersRouter);
   // app.get("/posts", postsRouter);
   // app.get("/profile", profileRouter);
   return app;

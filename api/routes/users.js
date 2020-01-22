@@ -26,8 +26,8 @@ router.post("/register", registerValidations, async (req, res) => {
     const user = await User.findOne({ email });
     if (user) return res.status(400).send("Email is already registered");
     const newUser = new User({ email, password, name });
-    const salt = bcrypt.genSaltSync(10);
-    newUser.password = await bcrypt.hash(salt, password);
+    const salt = await bcrypt.genSalt(10);
+    newUser.password = await bcrypt.hash(password, salt);
     await newUser.save();
     const token = jwt.sign(
       { user: { id: newUser.id } },
