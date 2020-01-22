@@ -12,3 +12,5 @@ export const registerValidations = [
   check("email", "please enter a valid email").isEmail(),
   check("password", "please enter a valid password").isLength({ min: 6 })
 ];
+
+export const profileValidations = [];
