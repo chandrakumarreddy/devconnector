@@ -1,20 +1,9 @@
-// third party modules
-import express from "express";
+import http from "http";
+import app from "./app";
 
-//custom modules
-import db from "./config/db";
-
-//db connection
-db();
-
-//defining port
 const PORT = process.env.PORT || 5000;
 
-//server instance
-const app = express();
-
-//routes
-app.get("/", (req, res) => res.send("hi"));
+const server = http.createServer(app);
 
 //listening to server
-app.listen(PORT, () => console.log(`server listening at port ${PORT}`));
+server.listen(PORT, () => console.log(`server listening at port ${PORT}`));
